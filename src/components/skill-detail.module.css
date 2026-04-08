@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
+  background: var(--panel-bg);
 }
 
 .name {
@@ -46,6 +47,11 @@
   margin-bottom: 0.6rem;
 }
 
+.installationWrap {
+  position: relative;
+  display: flex;
+}
+
 .installation {
   font-family: var(--font);
   font-size: 0.88rem;
@@ -56,7 +62,31 @@
   margin: 0;
   background: var(--bg);
   border: 1px solid var(--border);
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 2.6rem 0.8rem 1.2rem;
+  flex: 1;
+}
+
+.copyBtn {
+  position: absolute;
+  top: 50%;
+  right: 0.6rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--fg-muted);
+  padding: 0;
+  border-radius: 2px;
+  transition: color 0.1s;
+}
+
+.copyBtn:hover {
+  color: var(--fg);
 }
 
 .spacer {
@@ -88,11 +118,6 @@
 }
 
 .url:hover {
-  color: var(--fg-muted);
-}
-
-.hint {
-  font-size: 0.82rem;
   color: var(--fg-muted);
 }
 

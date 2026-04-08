@@ -1,7 +1,7 @@
 .frame {
   width: min(780px, 100%);
   background: var(--code-bg);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
 }
 
 .header {
@@ -20,6 +20,13 @@
   text-transform: uppercase;
 }
 
+.subtitle {
+  font-size: 0.72rem;
+  color: var(--fg-muted);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
 /* mobile: stacked */
 .body {
   display: flex;
@@ -31,6 +38,22 @@
   height: 1px;
   background: var(--border);
   flex-shrink: 0;
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 16px;
+  background: var(--bg);
+  color: var(--fg-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  border-top: 1px solid var(--border);
+}
+
+.statusSep {
+  opacity: 0.5;
 }
 
 .footer {
@@ -49,6 +72,9 @@
 }
 
 .footerLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   color: var(--fg-muted);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -73,6 +99,10 @@
   .divider {
     width: 1px;
     height: auto;
+  }
+
+  .statusBar {
+    padding: 4px 20px;
   }
 
   .footer {

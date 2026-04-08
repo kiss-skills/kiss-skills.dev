@@ -20,10 +20,6 @@ export default function SkillMenu({ selectedIndex, onSelect }: Props) {
       </div>
 
       <div className={styles.right}>
-        <div className={styles.org}>
-          <span className={styles.crown}>♛</span> KISS! Skills
-        </div>
-
         <nav className={styles.nav} aria-label="skills">
           {skills.map((skill, i) => (
             <button
@@ -44,7 +40,6 @@ export default function SkillMenu({ selectedIndex, onSelect }: Props) {
           </div>
         </nav>
 
-        <div className={styles.hint}>↑↓ navigate · ↵ open</div>
       </div>
     </div>
   )
