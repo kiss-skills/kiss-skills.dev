@@ -1,0 +1,13 @@
+.root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+@media (min-width: 640px) {
+  .root {
+    padding: 48px 24px;
+  }
+}

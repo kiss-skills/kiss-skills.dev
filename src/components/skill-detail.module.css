@@ -1,0 +1,103 @@
+.panel {
+  flex: 1;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--highlight);
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.version {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--fg);
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: var(--fg-muted);
+  margin-bottom: 0;
+}
+
+.separator {
+  height: 1px;
+  background: var(--border);
+  margin: 1.5rem 0;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.sectionLabel {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--fg);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+}
+
+.installation {
+  font-family: var(--font);
+  font-size: 0.88rem;
+  color: var(--highlight);
+  line-height: 1.6;
+  white-space: pre;
+  overflow-x: auto;
+  margin: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.8rem 1.2rem;
+}
+
+.spacer {
+  flex: 1;
+  min-height: 16px;
+}
+
+.urlRow {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.urlLabel {
+  color: var(--fg-muted);
+  flex-shrink: 0;
+}
+
+.url {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-family: var(--font);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.url:hover {
+  color: var(--fg-muted);
+}
+
+.hint {
+  font-size: 0.82rem;
+  color: var(--fg-muted);
+}
+
+@media (min-width: 640px) {
+  .panel {
+    padding: 28px 28px 24px;
+  }
+}
