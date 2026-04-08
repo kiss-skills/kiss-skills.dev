@@ -1,1 +1,1 @@
-# kiss-skills.dev
+# [`kiss-skills.dev`](https://www.kiss-skills.dev/)
