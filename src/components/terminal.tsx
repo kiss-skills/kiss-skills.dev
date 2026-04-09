@@ -41,7 +41,12 @@ export default function Terminal({ selectedIndex, onSelect }: Props) {
       </div>
 
       <div className={styles.footer}>
-        <span>MIT License</span>
+        <a
+          href="https://github.com/kiss-skills/pr-buddy?tab=MIT-1-ov-file"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.mitLink}
+        >MIT License</a>
         <span className={styles.footerSep}>·</span>
         <span>open source · free to use</span>
         <span className={styles.footerSep}>·</span>

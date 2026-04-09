@@ -12,11 +12,7 @@ export default function SkillMenu({ selectedIndex, onSelect }: Props) {
   return (
     <div className={styles.panel}>
       <div className={styles.iconWrap}>
-        <img
-          src={`/assets/${selected.id}-icon.png`}
-          alt={`${selected.name} mascot`}
-          className={styles.icon}
-        />
+        <pre className={styles.ascii} aria-hidden="true">{selected.ascii}</pre>
       </div>
 
       <div className={styles.right}>

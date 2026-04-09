@@ -1,34 +1,45 @@
 /* mobile-first: icon left, nav right */
 .panel {
   width: 100%;
-  padding: 20px 16px;
+  padding: 1.25rem 1rem;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 16px;
+  gap: 1rem;
   flex-shrink: 0;
 }
 
 .iconWrap {
-  width: 96px;
-  height: 96px;
+  width: 6rem;
+  height: 6rem;
   flex-shrink: 0;
   border: 1px solid var(--border);
   background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.icon {
+.ascii {
+  font-family: var(--font);
+  font-size: 0.5rem;
+  line-height: 1.4;
+  color: var(--fg-muted);
+  white-space: pre;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  image-rendering: pixelated;
-  display: block;
+  padding: 0.25rem;
+  overflow: hidden;
+  user-select: none;
 }
 
 .right {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
   flex: 1;
   min-width: 0;
 }
@@ -40,15 +51,15 @@
 .nav {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0.125rem;
 }
 
 .item {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.375rem;
   width: 100%;
-  padding: 5px 8px;
+  padding: 0.3125rem 0.5rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -66,7 +77,7 @@
 .item.selected {
   background: var(--accent-dim);
   border-left: 2px solid var(--highlight);
-  padding-left: 6px;
+  padding-left: 0.375rem;
   font-weight: 600;
   color: var(--fg);
 }
@@ -78,8 +89,8 @@
 .comingSoon {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 8px;
+  gap: 0.375rem;
+  padding: 0.3125rem 0.5rem;
   font-size: 0.85rem;
   color: var(--fg-muted);
   font-style: italic;
@@ -88,7 +99,7 @@
 .cursor {
   color: var(--fg-muted);
   font-size: 0.7rem;
-  width: 14px;
+  width: 0.875rem;
   flex-shrink: 0;
   display: inline-block;
 }
@@ -96,15 +107,15 @@
 /* desktop: stacked column */
 @media (min-width: 640px) {
   .panel {
-    width: 260px;
+    width: 16.25rem;
     flex-direction: column;
     align-items: center;
-    padding: 28px 20px 20px;
+    padding: 1.75rem 1.25rem 1.25rem;
     gap: 0;
   }
 
   .iconWrap {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
 
   .right {
@@ -116,12 +127,11 @@
   .spacer {
     display: block;
     flex: 1;
-    min-height: 12px;
+    min-height: 0.75rem;
   }
 
   .nav {
     width: 100%;
-    margin: 12px 0;
+    margin: 0.75rem 0;
   }
-
 }

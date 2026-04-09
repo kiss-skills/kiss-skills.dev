@@ -23,15 +23,25 @@ function CheckIcon() {
   )
 }
 
-export default function SkillDetail({ skill }: Props) {
-  const displayUrl = skill.githubUrl.replace('https://', '')
+function CodeBlock({ command }: { command: string }) {
   const [copied, setCopied] = useState(false)
-
   function handleCopy() {
-    navigator.clipboard.writeText(skill.installation)
+    navigator.clipboard.writeText(command)
     setCopied(true)
     setTimeout(() => setCopied(false), 1500)
   }
+  return (
+    <div className={styles.installationWrap}>
+      <pre className={styles.installation}>{command}</pre>
+      <button className={styles.copyBtn} onClick={handleCopy} aria-label="Copy to clipboard">
+        {copied ? <CheckIcon /> : <CopyIcon />}
+      </button>
+    </div>
+  )
+}
+
+export default function SkillDetail({ skill }: Props) {
+  const displayUrl = skill.githubUrl.replace('https://', '')
 
   return (
     <div className={styles.panel}>
@@ -44,12 +54,12 @@ export default function SkillDetail({ skill }: Props) {
 
       <div className={styles.section}>
         <div className={styles.sectionLabel}>INSTALLATION</div>
-        <div className={styles.installationWrap}>
-          <pre className={styles.installation}>{skill.installation}</pre>
-          <button className={styles.copyBtn} onClick={handleCopy} aria-label="Copy to clipboard">
-            {copied ? <CheckIcon /> : <CopyIcon />}
-          </button>
-        </div>
+        <CodeBlock command={skill.installation} />
+      </div>
+
+      <div className={styles.section}>
+        <div className={styles.sectionLabel}>UPDATE</div>
+        <CodeBlock command={skill.update} />
       </div>
 
       <div className={styles.spacer} />

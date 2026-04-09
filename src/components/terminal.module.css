@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 16px;
+  padding: 0.625rem 1rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -24,7 +24,7 @@
   font-size: 0.72rem;
   color: var(--fg-muted);
   letter-spacing: 0.04em;
-  margin-top: 2px;
+  margin-top: 0.125rem;
 }
 
 /* mobile: stacked */
@@ -43,8 +43,8 @@
 .statusBar {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 4px 16px;
+  gap: 0.5rem;
+  padding: 0.25rem 1rem;
   background: var(--bg);
   color: var(--fg-muted);
   font-size: 0.78rem;
@@ -60,8 +60,8 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  padding: 10px 16px;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
   border-top: 1px solid var(--border);
   font-size: 0.82rem;
   color: var(--fg-muted);
@@ -71,10 +71,20 @@
   opacity: 0.4;
 }
 
+.mitLink {
+  color: var(--fg-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.mitLink:hover {
+  color: var(--fg);
+}
+
 .footerLink {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.3125rem;
   color: var(--fg-muted);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -88,12 +98,12 @@
 /* desktop: side-by-side */
 @media (min-width: 640px) {
   .header {
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
   }
 
   .body {
     flex-direction: row;
-    min-height: 320px;
+    min-height: 20rem;
   }
 
   .divider {
@@ -102,11 +112,11 @@
   }
 
   .statusBar {
-    padding: 4px 20px;
+    padding: 0.25rem 1.25rem;
   }
 
   .footer {
-    padding: 8px 20px;
+    padding: 0.5rem 1.25rem;
     flex-wrap: nowrap;
   }
 }
