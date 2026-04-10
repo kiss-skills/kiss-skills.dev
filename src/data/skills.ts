@@ -13,7 +13,7 @@ export const skills: Skill[] = [
   {
     id: 'pr-buddy',
     name: '/pr-buddy',
-    version: '0.3.0',
+    version: '0.4.0',
     tagline: 'A Claude Code skill that makes you understand a PR before you approve it.',
     installation: 'npx skills add kiss-skills/pr-buddy',
     update: 'npx skills update',
